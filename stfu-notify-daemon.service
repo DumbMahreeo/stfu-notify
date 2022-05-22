@@ -1,0 +1,15 @@
+[Unit]
+Description=The stfu-notify daemon
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/stfu-notify-daemon
+ExecReload=/usr/bin/kill -HUP $MAINPID
+KillMode=process
+TimeoutSec=180
+
+[Install]
+WantedBy=default.target
+
+
