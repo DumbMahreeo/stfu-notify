@@ -2,6 +2,7 @@
 Description=The stfu-notify daemon
 
 [Service]
+Environment="DISPLAY=:0"
 Type=simple
 Restart=always
 ExecStart=/usr/bin/stfu-notify-daemon
@@ -10,6 +11,6 @@ KillMode=process
 TimeoutSec=180
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target
 
 
